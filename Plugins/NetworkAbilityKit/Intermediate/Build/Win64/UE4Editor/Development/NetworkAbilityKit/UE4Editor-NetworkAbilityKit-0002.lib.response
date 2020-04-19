@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-NetworkAbilityKit-0002.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\p4\LD4\NetworkAbilityKit\Intermediate\Build\Win64\NetworkAbilityEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\p4\LD4\NetworkAbilityKit\Plugins\NetworkAbilityKit\Intermediate\Build\Win64\UE4Editor\Development\NetworkAbilityKit\Module.NetworkAbilityKit.cpp.obj"
+"D:\p4\LD4\NetworkAbilityKit\Plugins\NetworkAbilityKit\Intermediate\Build\Win64\UE4Editor\Development\NetworkAbilityKit\Module.NetworkAbilityKit.gen.cpp.obj"
+"D:\p4\LD4\NetworkAbilityKit\Plugins\NetworkAbilityKit\Intermediate\Build\Win64\UE4Editor\Development\NetworkAbilityKit\Default.rc2.res"
+/OUT:"D:\p4\LD4\NetworkAbilityKit\Plugins\NetworkAbilityKit\Intermediate\Build\Win64\UE4Editor\Development\NetworkAbilityKit\UE4Editor-NetworkAbilityKit-0002.lib"
+/INCLUDE:IMPLEMENT_MODULE_NetworkAbilityKit
