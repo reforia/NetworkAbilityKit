@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,6 +14,7 @@ class UBoolProperty;
 #endif
 #define NETWORKABILITYKIT_StatusSetBase_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_RPC_WRAPPERS \
 	virtual bool SetBoolAttributeByName_Validate(FName , bool ); \
 	virtual void SetBoolAttributeByName_Implementation(FName PropName, bool bNewBool); \
@@ -22,71 +23,11 @@ class UBoolProperty;
 	virtual bool SetBoolAttribute_Validate(UBoolProperty* , bool ); \
 	virtual void SetBoolAttribute_Implementation(UBoolProperty* BoolProp, bool bNewBool); \
  \
-	DECLARE_FUNCTION(execSetBoolAttributeByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropName); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetBoolAttributeByName_Validate(Z_Param_PropName,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetBoolAttributeByName_Validate")); \
-			return; \
-		} \
-		P_THIS->SetBoolAttributeByName_Implementation(Z_Param_PropName,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMulticast_SetBoolAttribute) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Multicast_SetBoolAttribute_Validate(Z_Param_BoolProp,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("Multicast_SetBoolAttribute_Validate")); \
-			return; \
-		} \
-		P_THIS->Multicast_SetBoolAttribute_Implementation(Z_Param_BoolProp,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBoolAttribute) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetBoolAttribute_Validate(Z_Param_BoolProp,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetBoolAttribute_Validate")); \
-			return; \
-		} \
-		P_THIS->SetBoolAttribute_Implementation(Z_Param_BoolProp,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBoolAttributeValue) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->GetBoolAttributeValue(Z_Param_BoolProp); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBoolAttribute) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropertyName); \
-		P_GET_UBOOL_REF(Z_Param_Out_Success); \
-		P_GET_OBJECT_REF(UBoolProperty,Z_Param_Out_BoolProp); \
-		P_GET_UBOOL_REF(Z_Param_Out_AttributeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GetBoolAttribute(Z_Param_PropertyName,Z_Param_Out_Success,Z_Param_Out_BoolProp,Z_Param_Out_AttributeValue); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetBoolAttributeByName); \
+	DECLARE_FUNCTION(execMulticast_SetBoolAttribute); \
+	DECLARE_FUNCTION(execSetBoolAttribute); \
+	DECLARE_FUNCTION(execGetBoolAttributeValue); \
+	DECLARE_FUNCTION(execGetBoolAttribute);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -97,71 +38,11 @@ class UBoolProperty;
 	virtual bool SetBoolAttribute_Validate(UBoolProperty* , bool ); \
 	virtual void SetBoolAttribute_Implementation(UBoolProperty* BoolProp, bool bNewBool); \
  \
-	DECLARE_FUNCTION(execSetBoolAttributeByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropName); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetBoolAttributeByName_Validate(Z_Param_PropName,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetBoolAttributeByName_Validate")); \
-			return; \
-		} \
-		P_THIS->SetBoolAttributeByName_Implementation(Z_Param_PropName,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMulticast_SetBoolAttribute) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Multicast_SetBoolAttribute_Validate(Z_Param_BoolProp,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("Multicast_SetBoolAttribute_Validate")); \
-			return; \
-		} \
-		P_THIS->Multicast_SetBoolAttribute_Implementation(Z_Param_BoolProp,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetBoolAttribute) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_GET_UBOOL(Z_Param_bNewBool); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetBoolAttribute_Validate(Z_Param_BoolProp,Z_Param_bNewBool)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetBoolAttribute_Validate")); \
-			return; \
-		} \
-		P_THIS->SetBoolAttribute_Implementation(Z_Param_BoolProp,Z_Param_bNewBool); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBoolAttributeValue) \
-	{ \
-		P_GET_OBJECT(UBoolProperty,Z_Param_BoolProp); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->GetBoolAttributeValue(Z_Param_BoolProp); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetBoolAttribute) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropertyName); \
-		P_GET_UBOOL_REF(Z_Param_Out_Success); \
-		P_GET_OBJECT_REF(UBoolProperty,Z_Param_Out_BoolProp); \
-		P_GET_UBOOL_REF(Z_Param_Out_AttributeValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->GetBoolAttribute(Z_Param_PropertyName,Z_Param_Out_Success,Z_Param_Out_BoolProp,Z_Param_Out_AttributeValue); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetBoolAttributeByName); \
+	DECLARE_FUNCTION(execMulticast_SetBoolAttribute); \
+	DECLARE_FUNCTION(execSetBoolAttribute); \
+	DECLARE_FUNCTION(execGetBoolAttributeValue); \
+	DECLARE_FUNCTION(execGetBoolAttribute);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_EVENT_PARMS \
@@ -192,9 +73,15 @@ private: \
 	static void StaticRegisterNativesAStatusSetBase(); \
 	friend struct Z_Construct_UClass_AStatusSetBase_Statics; \
 public: \
-	DECLARE_CLASS(AStatusSetBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AStatusSetBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AStatusSetBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		BelongingActor=NETFIELD_REP_START, \
+		NETFIELD_REP_END=BelongingActor	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_INCLASS \
@@ -202,9 +89,15 @@ private: \
 	static void StaticRegisterNativesAStatusSetBase(); \
 	friend struct Z_Construct_UClass_AStatusSetBase_Statics; \
 public: \
-	DECLARE_CLASS(AStatusSetBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AStatusSetBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AStatusSetBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		BelongingActor=NETFIELD_REP_START, \
+		NETFIELD_REP_END=BelongingActor	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_STANDARD_CONSTRUCTORS \
@@ -240,6 +133,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AStatusSetBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_INCLASS \
@@ -252,6 +146,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_StatusSetBase_h_13_INCLASS_NO_PURE_DECLS \

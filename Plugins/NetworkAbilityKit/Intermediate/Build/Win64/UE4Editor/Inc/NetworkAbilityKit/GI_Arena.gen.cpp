@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -56,12 +56,12 @@ void EmptyLinkFunctionForGeneratedCodeGI_Arena() {}
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
-		0x001000A8u,
-		METADATA_PARAMS(Z_Construct_UClass_UGI_Arena_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UGI_Arena_Statics::Class_MetaDataParams))
+		0x009000A8u,
+		METADATA_PARAMS(Z_Construct_UClass_UGI_Arena_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UGI_Arena_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UGI_Arena()
 	{
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeGI_Arena() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGI_Arena, 1589593671);
+	IMPLEMENT_CLASS(UGI_Arena, 324763869);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<UGI_Arena>()
 	{
 		return UGI_Arena::StaticClass();

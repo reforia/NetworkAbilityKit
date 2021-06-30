@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,42 +14,19 @@ class APlayerController;
 #endif
 #define NETWORKABILITYKIT_GM_Arena_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_RPC_WRAPPERS \
 	virtual bool SERVER_SpawnPlayer_Validate(APlayerController* ); \
 	virtual void SERVER_SpawnPlayer_Implementation(APlayerController* PlayerController); \
  \
-	DECLARE_FUNCTION(execSERVER_SpawnPlayer) \
-	{ \
-		P_GET_OBJECT(APlayerController,Z_Param_PlayerController); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnPlayer_Validate(Z_Param_PlayerController)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnPlayer_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnPlayer_Implementation(Z_Param_PlayerController); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSERVER_SpawnPlayer);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool SERVER_SpawnPlayer_Validate(APlayerController* ); \
 	virtual void SERVER_SpawnPlayer_Implementation(APlayerController* PlayerController); \
  \
-	DECLARE_FUNCTION(execSERVER_SpawnPlayer) \
-	{ \
-		P_GET_OBJECT(APlayerController,Z_Param_PlayerController); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnPlayer_Validate(Z_Param_PlayerController)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnPlayer_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnPlayer_Implementation(Z_Param_PlayerController); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSERVER_SpawnPlayer);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_EVENT_PARMS \
@@ -113,6 +90,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGM_Arena); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_INCLASS \
@@ -125,6 +103,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_GM_Arena_h_27_INCLASS_NO_PURE_DECLS \

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,74 +20,21 @@ static inline void FOnPlayerDeathDelegate_DelegateWrapper(const FMulticastScript
 }
 
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnRep_MaxStaminaChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_MaxStaminaChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_StaminaChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_StaminaChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_MaxHealthChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_MaxHealthChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_HealthChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_HealthChanged(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRep_MaxStaminaChanged); \
+	DECLARE_FUNCTION(execOnRep_StaminaChanged); \
+	DECLARE_FUNCTION(execOnRep_MaxHealthChanged); \
+	DECLARE_FUNCTION(execOnRep_HealthChanged);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnRep_MaxStaminaChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_MaxStaminaChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_StaminaChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_StaminaChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_MaxHealthChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_MaxHealthChanged(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnRep_HealthChanged) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnRep_HealthChanged(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnRep_MaxStaminaChanged); \
+	DECLARE_FUNCTION(execOnRep_StaminaChanged); \
+	DECLARE_FUNCTION(execOnRep_MaxHealthChanged); \
+	DECLARE_FUNCTION(execOnRep_HealthChanged);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_INCLASS_NO_PURE_DECLS \
@@ -95,9 +42,18 @@ private: \
 	static void StaticRegisterNativesAAttrSet_Action(); \
 	friend struct Z_Construct_UClass_AAttrSet_Action_Statics; \
 public: \
-	DECLARE_CLASS(AAttrSet_Action, AAttributeSetBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAttrSet_Action, AAttributeSetBase, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAttrSet_Action) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		Health=NETFIELD_REP_START, \
+		MaxHealth, \
+		Stamina, \
+		MaxStamina, \
+		NETFIELD_REP_END=MaxStamina	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_INCLASS \
@@ -105,9 +61,18 @@ private: \
 	static void StaticRegisterNativesAAttrSet_Action(); \
 	friend struct Z_Construct_UClass_AAttrSet_Action_Statics; \
 public: \
-	DECLARE_CLASS(AAttrSet_Action, AAttributeSetBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAttrSet_Action, AAttributeSetBase, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAttrSet_Action) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		Health=NETFIELD_REP_START, \
+		MaxHealth, \
+		Stamina, \
+		MaxStamina, \
+		NETFIELD_REP_END=MaxStamina	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_STANDARD_CONSTRUCTORS \
@@ -140,6 +105,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAttrSet_Action); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_INCLASS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_STANDARD_CONSTRUCTORS \
@@ -151,6 +117,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_INCLASS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttrSet_Action_h_17_ENHANCED_CONSTRUCTORS \

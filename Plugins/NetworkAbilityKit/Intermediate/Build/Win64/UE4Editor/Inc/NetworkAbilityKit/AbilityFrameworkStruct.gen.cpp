@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,6 +20,9 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkStruct() {}
 	NETWORKABILITYKIT_API UScriptStruct* Z_Construct_UScriptStruct_FCostStruct();
 	NETWORKABILITYKIT_API UEnum* Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod();
 // End Cross Module References
+
+static_assert(std::is_polymorphic<FAbilityListStruct>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FAbilityListStruct cannot be polymorphic unless super FTableRowBase is polymorphic");
+
 class UScriptStruct* FAbilityListStruct::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -49,13 +52,13 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFAbilityListS
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ability_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Ability;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Dev_AbilityName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FNamePropertyParams NewProp_Dev_AbilityName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ability_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Ability;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -70,22 +73,22 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFAbilityListS
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAbilityListStruct>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData[] = {
-		{ "Category", "AbilityListStruct" },
-		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability = { "Ability", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FAbilityListStruct, Ability), Z_Construct_UClass_AAbilityBase_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName_MetaData[] = {
 		{ "Category", "AbilityListStruct" },
 		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName = { "Dev_AbilityName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FAbilityListStruct, Dev_AbilityName), METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName = { "Dev_AbilityName", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FAbilityListStruct, Dev_AbilityName), METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData[] = {
+		{ "Category", "AbilityListStruct" },
+		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability = { "Ability", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FAbilityListStruct, Ability), Z_Construct_UClass_AAbilityBase_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FAbilityListStruct_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Dev_AbilityName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAbilityListStruct_Statics::NewProp_Ability,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAbilityListStruct_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_NetworkAbilityKit,
@@ -95,10 +98,10 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFAbilityListS
 		sizeof(FAbilityListStruct),
 		alignof(FAbilityListStruct),
 		Z_Construct_UScriptStruct_FAbilityListStruct_Statics::PropPointers,
-		ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAbilityListStruct_Statics::Struct_MetaDataParams))
 	};
 	UScriptStruct* Z_Construct_UScriptStruct_FAbilityListStruct()
 	{
@@ -115,7 +118,7 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFAbilityListS
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FAbilityListStruct_Hash() { return 4153541662U; }
+	uint32 Get_Z_Construct_UScriptStruct_FAbilityListStruct_Hash() { return 2458914430U; }
 class UScriptStruct* FCostStruct::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -145,18 +148,18 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFCostStruct
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeName_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Value;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AttributeName;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ModifyMethod_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ModifyMethod_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ModifyMethod;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ModifyMethod_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AttributeName;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Value;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -171,32 +174,32 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFCostStruct
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCostStruct>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData[] = {
 		{ "Category", "CostStruct" },
 		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData)) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName = { "AttributeName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, AttributeName), METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_MetaData[] = {
 		{ "Category", "CostStruct" },
 		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod = { "ModifyMethod", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, ModifyMethod), Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod, METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod = { "ModifyMethod", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, ModifyMethod), Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod, METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData[] = {
 		{ "Category", "CostStruct" },
 		{ "ModuleRelativePath", "Public/AbilityFrameworkStruct.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName = { "AttributeName", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, AttributeName), METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCostStruct, Value), METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCostStruct_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_AttributeName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_ModifyMethod,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCostStruct_Statics::NewProp_Value,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCostStruct_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_NetworkAbilityKit,
@@ -206,10 +209,10 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFCostStruct
 		sizeof(FCostStruct),
 		alignof(FCostStruct),
 		Z_Construct_UScriptStruct_FCostStruct_Statics::PropPointers,
-		ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FCostStruct_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCostStruct_Statics::Struct_MetaDataParams))
 	};
 	UScriptStruct* Z_Construct_UScriptStruct_FCostStruct()
 	{
@@ -226,7 +229,7 @@ static struct FScriptStruct_NetworkAbilityKit_StaticRegisterNativesFCostStruct
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FCostStruct_Hash() { return 1045434308U; }
+	uint32 Get_Z_Construct_UScriptStruct_FCostStruct_Hash() { return 841839194U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

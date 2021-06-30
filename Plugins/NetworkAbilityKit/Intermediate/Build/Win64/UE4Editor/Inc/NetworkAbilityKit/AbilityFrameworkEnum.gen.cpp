@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 		return EModifierType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EModifierType(EModifierType_StaticEnum, TEXT("/Script/NetworkAbilityKit"), TEXT("EModifierType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EModifierType_Hash() { return 3031502386U; }
+	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EModifierType_Hash() { return 2368580662U; }
 	UEnum* Z_Construct_UEnum_NetworkAbilityKit_EModifierType()
 	{
 #if WITH_HOT_RELOAD
@@ -64,11 +64,12 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 				"EModifierType",
 				"EModifierType",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -88,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 		return EAttrModifyMethod_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAttrModifyMethod(EAttrModifyMethod_StaticEnum, TEXT("/Script/NetworkAbilityKit"), TEXT("EAttrModifyMethod"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod_Hash() { return 2138676382U; }
+	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod_Hash() { return 3105850170U; }
 	UEnum* Z_Construct_UEnum_NetworkAbilityKit_EAttrModifyMethod()
 	{
 #if WITH_HOT_RELOAD
@@ -122,11 +123,12 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 				"EAttrModifyMethod",
 				"EAttrModifyMethod",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -146,7 +148,7 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 		return EAbilityNotValidType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAbilityNotValidType(EAbilityNotValidType_StaticEnum, TEXT("/Script/NetworkAbilityKit"), TEXT("EAbilityNotValidType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAbilityNotValidType_Hash() { return 982915761U; }
+	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAbilityNotValidType_Hash() { return 1307350656U; }
 	UEnum* Z_Construct_UEnum_NetworkAbilityKit_EAbilityNotValidType()
 	{
 #if WITH_HOT_RELOAD
@@ -186,11 +188,12 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 				"EAbilityNotValidType",
 				"EAbilityNotValidType",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
@@ -210,7 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 		return EAbilityType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAbilityType(EAbilityType_StaticEnum, TEXT("/Script/NetworkAbilityKit"), TEXT("EAbilityType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAbilityType_Hash() { return 1959622236U; }
+	uint32 Get_Z_Construct_UEnum_NetworkAbilityKit_EAbilityType_Hash() { return 1590480099U; }
 	UEnum* Z_Construct_UEnum_NetworkAbilityKit_EAbilityType()
 	{
 #if WITH_HOT_RELOAD
@@ -247,11 +250,12 @@ void EmptyLinkFunctionForGeneratedCodeAbilityFrameworkEnum() {}
 				"EAbilityType",
 				"EAbilityType",
 				Enumerators,
-				ARRAY_COUNT(Enumerators),
+				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}

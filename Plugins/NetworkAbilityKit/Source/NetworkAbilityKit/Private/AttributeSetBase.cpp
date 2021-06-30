@@ -78,7 +78,7 @@ float AAttributeSetBase::GetTmpValueAfterModifiedFloatAttribute(UFloatProperty* 
 
 void AAttributeSetBase::SetFloatAttributeValueByName_Implementation(FName PropName, EAttrModifyMethod ModifyMethod, float ModifyValue)
 {
-	if (Role == ROLE_Authority)
+	if (HasAuthority())
 	{
 		UFloatProperty* tmpProp = GetFloatAttribute(PropName);
 		if (tmpProp)
@@ -96,7 +96,7 @@ bool AAttributeSetBase::SetFloatAttributeValueByName_Validate(FName PropName, EA
 
 void AAttributeSetBase::SetFloatAttributeValue_Implementation(UFloatProperty* FloatProp, float NewValue)
 {
-	if (Role == ROLE_Authority)
+	if (HasAuthority())
 	{
 		//UE_LOG(LogTemp, Log, TEXT("Float Property Value Set"));
 		FloatProp->SetPropertyValue_InContainer(this, NewValue);

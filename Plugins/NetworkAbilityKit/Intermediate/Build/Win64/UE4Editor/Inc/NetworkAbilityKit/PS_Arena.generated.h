@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,6 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORKABILITYKIT_PS_Arena_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_RPC_WRAPPERS
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_INCLASS_NO_PURE_DECLS \
@@ -20,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAPS_Arena(); \
 	friend struct Z_Construct_UClass_APS_Arena_Statics; \
 public: \
-	DECLARE_CLASS(APS_Arena, APlayerState, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(APS_Arena, APlayerState, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APS_Arena)
 
 
@@ -29,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAPS_Arena(); \
 	friend struct Z_Construct_UClass_APS_Arena_Statics; \
 public: \
-	DECLARE_CLASS(APS_Arena, APlayerState, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(APS_Arena, APlayerState, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APS_Arena)
 
 
@@ -65,6 +66,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APS_Arena); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_INCLASS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_STANDARD_CONSTRUCTORS \
@@ -76,6 +78,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_INCLASS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PS_Arena_h_15_ENHANCED_CONSTRUCTORS \

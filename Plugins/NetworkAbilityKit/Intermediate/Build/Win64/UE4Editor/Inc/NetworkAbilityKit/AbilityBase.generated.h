@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -22,6 +22,7 @@ static inline void FEndAbilityDelegate_DelegateWrapper(const FMulticastScriptDel
 }
 
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_RPC_WRAPPERS \
 	virtual bool ApplyCost_Validate(); \
 	virtual void ApplyCost_Implementation(); \
@@ -38,178 +39,23 @@ static inline void FEndAbilityDelegate_DelegateWrapper(const FMulticastScriptDel
 	virtual bool TryActivate_Validate(); \
 	virtual void TryActivate_Implementation(); \
  \
-	DECLARE_FUNCTION(execAbilityPassive) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityPassive(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityPoint) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityPoint(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityNoTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityNoTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnAbilityReadyToEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnAbilityReadyToEnd(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execApplyCost) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->ApplyCost_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("ApplyCost_Validate")); \
-			return; \
-		} \
-		P_THIS->ApplyCost_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCoolDownCycleTick) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CoolDownCycleTick(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCostPrecheck) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CostPrecheck(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execActivatePrecheck) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ActivatePrecheck(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMouseLocationAvailabilityCheck) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_MouseLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MouseLocationAvailabilityCheck(Z_Param_MouseLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_AbilityPointCoreLogic) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_AbilityPointCoreLogic_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_AbilityPointCoreLogic_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_AbilityPointCoreLogic_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPointAbilityMousePositionInWorldAndTryCommit) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->GetPointAbilityMousePositionInWorldAndTryCommit_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("GetPointAbilityMousePositionInWorldAndTryCommit_Validate")); \
-			return; \
-		} \
-		P_THIS->GetPointAbilityMousePositionInWorldAndTryCommit_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCommitAbility) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CommitAbility_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CommitAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->CommitAbility_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEndAbility) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->EndAbility_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("EndAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->EndAbility_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartCoolDown) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartCoolDown_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartCoolDown_Validate")); \
-			return; \
-		} \
-		P_THIS->StartCoolDown_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartIntervalThink) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaTime); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartIntervalThink(Z_Param_DeltaTime); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryActivate) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->TryActivate_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("TryActivate_Validate")); \
-			return; \
-		} \
-		P_THIS->TryActivate_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execAbilityPassive); \
+	DECLARE_FUNCTION(execAbilityTarget); \
+	DECLARE_FUNCTION(execAbilityPoint); \
+	DECLARE_FUNCTION(execAbilityNoTarget); \
+	DECLARE_FUNCTION(execOnAbilityReadyToEnd); \
+	DECLARE_FUNCTION(execApplyCost); \
+	DECLARE_FUNCTION(execCoolDownCycleTick); \
+	DECLARE_FUNCTION(execCostPrecheck); \
+	DECLARE_FUNCTION(execActivatePrecheck); \
+	DECLARE_FUNCTION(execMouseLocationAvailabilityCheck); \
+	DECLARE_FUNCTION(execSERVER_AbilityPointCoreLogic); \
+	DECLARE_FUNCTION(execGetPointAbilityMousePositionInWorldAndTryCommit); \
+	DECLARE_FUNCTION(execCommitAbility); \
+	DECLARE_FUNCTION(execEndAbility); \
+	DECLARE_FUNCTION(execStartCoolDown); \
+	DECLARE_FUNCTION(execStartIntervalThink); \
+	DECLARE_FUNCTION(execTryActivate);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -228,178 +74,23 @@ static inline void FEndAbilityDelegate_DelegateWrapper(const FMulticastScriptDel
 	virtual bool TryActivate_Validate(); \
 	virtual void TryActivate_Implementation(); \
  \
-	DECLARE_FUNCTION(execAbilityPassive) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityPassive(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityPoint) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityPoint(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAbilityNoTarget) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->AbilityNoTarget(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnAbilityReadyToEnd) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnAbilityReadyToEnd(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execApplyCost) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->ApplyCost_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("ApplyCost_Validate")); \
-			return; \
-		} \
-		P_THIS->ApplyCost_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCoolDownCycleTick) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->CoolDownCycleTick(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCostPrecheck) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->CostPrecheck(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execActivatePrecheck) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ActivatePrecheck(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMouseLocationAvailabilityCheck) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_MouseLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->MouseLocationAvailabilityCheck(Z_Param_MouseLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_AbilityPointCoreLogic) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_AbilityPointCoreLogic_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_AbilityPointCoreLogic_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_AbilityPointCoreLogic_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetPointAbilityMousePositionInWorldAndTryCommit) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->GetPointAbilityMousePositionInWorldAndTryCommit_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("GetPointAbilityMousePositionInWorldAndTryCommit_Validate")); \
-			return; \
-		} \
-		P_THIS->GetPointAbilityMousePositionInWorldAndTryCommit_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCommitAbility) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CommitAbility_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CommitAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->CommitAbility_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execEndAbility) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->EndAbility_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("EndAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->EndAbility_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartCoolDown) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->StartCoolDown_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("StartCoolDown_Validate")); \
-			return; \
-		} \
-		P_THIS->StartCoolDown_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execStartIntervalThink) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaTime); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->StartIntervalThink(Z_Param_DeltaTime); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryActivate) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->TryActivate_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("TryActivate_Validate")); \
-			return; \
-		} \
-		P_THIS->TryActivate_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execAbilityPassive); \
+	DECLARE_FUNCTION(execAbilityTarget); \
+	DECLARE_FUNCTION(execAbilityPoint); \
+	DECLARE_FUNCTION(execAbilityNoTarget); \
+	DECLARE_FUNCTION(execOnAbilityReadyToEnd); \
+	DECLARE_FUNCTION(execApplyCost); \
+	DECLARE_FUNCTION(execCoolDownCycleTick); \
+	DECLARE_FUNCTION(execCostPrecheck); \
+	DECLARE_FUNCTION(execActivatePrecheck); \
+	DECLARE_FUNCTION(execMouseLocationAvailabilityCheck); \
+	DECLARE_FUNCTION(execSERVER_AbilityPointCoreLogic); \
+	DECLARE_FUNCTION(execGetPointAbilityMousePositionInWorldAndTryCommit); \
+	DECLARE_FUNCTION(execCommitAbility); \
+	DECLARE_FUNCTION(execEndAbility); \
+	DECLARE_FUNCTION(execStartCoolDown); \
+	DECLARE_FUNCTION(execStartIntervalThink); \
+	DECLARE_FUNCTION(execTryActivate);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_EVENT_PARMS \
@@ -415,9 +106,18 @@ private: \
 	static void StaticRegisterNativesAAbilityBase(); \
 	friend struct Z_Construct_UClass_AAbilityBase_Statics; \
 public: \
-	DECLARE_CLASS(AAbilityBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAbilityBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAbilityBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		bDisabledByModifier=NETFIELD_REP_START, \
+		bCanActivate, \
+		bInCoolDown, \
+		RemainingCoolDown, \
+		NETFIELD_REP_END=RemainingCoolDown	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_INCLASS \
@@ -425,9 +125,18 @@ private: \
 	static void StaticRegisterNativesAAbilityBase(); \
 	friend struct Z_Construct_UClass_AAbilityBase_Statics; \
 public: \
-	DECLARE_CLASS(AAbilityBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAbilityBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAbilityBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		bDisabledByModifier=NETFIELD_REP_START, \
+		bCanActivate, \
+		bInCoolDown, \
+		RemainingCoolDown, \
+		NETFIELD_REP_END=RemainingCoolDown	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_STANDARD_CONSTRUCTORS \
@@ -463,6 +172,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAbilityBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_INCLASS \
@@ -475,6 +185,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBase_h_21_INCLASS_NO_PURE_DECLS \

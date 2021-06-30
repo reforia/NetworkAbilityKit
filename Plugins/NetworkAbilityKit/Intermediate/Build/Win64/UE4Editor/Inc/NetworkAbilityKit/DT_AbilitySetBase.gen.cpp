@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -59,7 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeDT_AbilitySetBase() {}
 		{ "ModuleRelativePath", "Public/DT_AbilitySetBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct = { "AbilityListDataStruct", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDT_AbilitySetBase, AbilityListDataStruct), Z_Construct_UScriptStruct_FAbilityListStruct, METADATA_PARAMS(Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct_MetaData, ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct = { "AbilityListDataStruct", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UDT_AbilitySetBase, AbilityListDataStruct), Z_Construct_UScriptStruct_FAbilityListStruct, METADATA_PARAMS(Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDT_AbilitySetBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDT_AbilitySetBase_Statics::NewProp_AbilityListDataStruct,
 	};
@@ -74,12 +74,12 @@ void EmptyLinkFunctionForGeneratedCodeDT_AbilitySetBase() {}
 		nullptr,
 		Z_Construct_UClass_UDT_AbilitySetBase_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::PropPointers),
 		0,
 		0x009000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_UDT_AbilitySetBase_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UDT_AbilitySetBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UDT_AbilitySetBase_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UDT_AbilitySetBase()
 	{
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeDT_AbilitySetBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UDT_AbilitySetBase, 1122348770);
+	IMPLEMENT_CLASS(UDT_AbilitySetBase, 3606395580);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<UDT_AbilitySetBase>()
 	{
 		return UDT_AbilitySetBase::StaticClass();

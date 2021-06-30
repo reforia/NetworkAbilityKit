@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -16,6 +16,7 @@ class AActor;
 #endif
 #define NETWORKABILITYKIT_ModifierComp_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_RPC_WRAPPERS \
 	virtual void OnTryRemoveModifierByType_Implementation(EModifierType ModifierType); \
 	virtual void OnTryRemoveModifier_Implementation(FName ModifierName); \
@@ -23,220 +24,34 @@ class AActor;
 	virtual bool AddToLocalModifierList_Validate(AModifierBase* ); \
 	virtual void AddToLocalModifierList_Implementation(AModifierBase* Modifier); \
  \
-	DECLARE_FUNCTION(execOnTryRemoveModifierByType) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifierByType_Implementation(EModifierType(Z_Param_ModifierType)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTryRemoveModifier) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifier_Implementation(Z_Param_ModifierName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReceivedModifier) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReceivedModifier_Implementation(Z_Param_Modifier,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockTypeList) \
-	{ \
-		P_GET_TARRAY(EModifierType,Z_Param_ModifierBlockTypeListToRemove); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierBlockTypeList(Z_Param_ModifierBlockTypeListToRemove); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockList) \
-	{ \
-		P_GET_TARRAY(FName,Z_Param_ModifierBlockListToRemove); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierBlockList(Z_Param_ModifierBlockListToRemove); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierList) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierList(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnModifierRemoved) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_RemovedModifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnModifierRemoved(Z_Param_RemovedModifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockTypeCheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->BlockTypeCheck(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockListCheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->BlockListCheck(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddToLocalModifierList) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->AddToLocalModifierList_Validate(Z_Param_Modifier)) \
-		{ \
-			RPC_ValidateFailed(TEXT("AddToLocalModifierList_Validate")); \
-			return; \
-		} \
-		P_THIS->AddToLocalModifierList_Implementation(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execApplyModifierPrecheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_InModifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ApplyModifierPrecheck(Z_Param_InModifier); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnTryRemoveModifierByType); \
+	DECLARE_FUNCTION(execOnTryRemoveModifier); \
+	DECLARE_FUNCTION(execOnReceivedModifier); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockTypeList); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockList); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierList); \
+	DECLARE_FUNCTION(execOnModifierRemoved); \
+	DECLARE_FUNCTION(execBlockTypeCheck); \
+	DECLARE_FUNCTION(execBlockListCheck); \
+	DECLARE_FUNCTION(execAddToLocalModifierList); \
+	DECLARE_FUNCTION(execApplyModifierPrecheck);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool AddToLocalModifierList_Validate(AModifierBase* ); \
 	virtual void AddToLocalModifierList_Implementation(AModifierBase* Modifier); \
  \
-	DECLARE_FUNCTION(execOnTryRemoveModifierByType) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifierByType_Implementation(EModifierType(Z_Param_ModifierType)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTryRemoveModifier) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifier_Implementation(Z_Param_ModifierName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReceivedModifier) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReceivedModifier_Implementation(Z_Param_Modifier,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockTypeList) \
-	{ \
-		P_GET_TARRAY(EModifierType,Z_Param_ModifierBlockTypeListToRemove); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierBlockTypeList(Z_Param_ModifierBlockTypeListToRemove); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockList) \
-	{ \
-		P_GET_TARRAY(FName,Z_Param_ModifierBlockListToRemove); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierBlockList(Z_Param_ModifierBlockListToRemove); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execRemoveFromLocalModifierList) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->RemoveFromLocalModifierList(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnModifierRemoved) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_RemovedModifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnModifierRemoved(Z_Param_RemovedModifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockTypeCheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->BlockTypeCheck(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execBlockListCheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->BlockListCheck(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execAddToLocalModifierList) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->AddToLocalModifierList_Validate(Z_Param_Modifier)) \
-		{ \
-			RPC_ValidateFailed(TEXT("AddToLocalModifierList_Validate")); \
-			return; \
-		} \
-		P_THIS->AddToLocalModifierList_Implementation(Z_Param_Modifier); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execApplyModifierPrecheck) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_InModifier); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ApplyModifierPrecheck(Z_Param_InModifier); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnTryRemoveModifierByType); \
+	DECLARE_FUNCTION(execOnTryRemoveModifier); \
+	DECLARE_FUNCTION(execOnReceivedModifier); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockTypeList); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierBlockList); \
+	DECLARE_FUNCTION(execRemoveFromLocalModifierList); \
+	DECLARE_FUNCTION(execOnModifierRemoved); \
+	DECLARE_FUNCTION(execBlockTypeCheck); \
+	DECLARE_FUNCTION(execBlockListCheck); \
+	DECLARE_FUNCTION(execAddToLocalModifierList); \
+	DECLARE_FUNCTION(execApplyModifierPrecheck);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_EVENT_PARMS \
@@ -292,7 +107,13 @@ public: \
 	DECLARE_CLASS(UModifierComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UModifierComp) \
 	virtual UObject* _getUObject() const override { return const_cast<UModifierComp*>(this); } \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		ModifierList=NETFIELD_REP_START, \
+		NETFIELD_REP_END=ModifierList	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_INCLASS \
@@ -303,7 +124,13 @@ public: \
 	DECLARE_CLASS(UModifierComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UModifierComp) \
 	virtual UObject* _getUObject() const override { return const_cast<UModifierComp*>(this); } \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		ModifierList=NETFIELD_REP_START, \
+		NETFIELD_REP_END=ModifierList	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_STANDARD_CONSTRUCTORS \
@@ -344,6 +171,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UModifierComp); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_INCLASS \
@@ -356,6 +184,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_ModifierComp_h_16_INCLASS_NO_PURE_DECLS \

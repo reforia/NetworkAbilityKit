@@ -6,6 +6,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "FogOfWarWorker.h"
+#include "Rendering\Texture2DResource.h"
 #include "FogOfWarManager.generated.h"
 
 UCLASS()

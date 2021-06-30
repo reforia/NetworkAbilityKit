@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -16,72 +16,19 @@ class AModifierBase;
 #endif
 #define NETWORKABILITYKIT_BPF_Modifier_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execTryRemoveModifierByTypeFromTarget) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryRemoveModifierByTypeFromTarget(EModifierType(Z_Param_ModifierType),Z_Param_Target); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryRemoveModifierFromTarget) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryRemoveModifierFromTarget(Z_Param_ModifierName,Z_Param_Target); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryApplyModifierToTarget) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ModifierClass); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryApplyModifierToTarget(Z_Param_ModifierClass,Z_Param_Target,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execTryRemoveModifierByTypeFromTarget); \
+	DECLARE_FUNCTION(execTryRemoveModifierFromTarget); \
+	DECLARE_FUNCTION(execTryApplyModifierToTarget);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execTryRemoveModifierByTypeFromTarget) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryRemoveModifierByTypeFromTarget(EModifierType(Z_Param_ModifierType),Z_Param_Target); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryRemoveModifierFromTarget) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryRemoveModifierFromTarget(Z_Param_ModifierName,Z_Param_Target); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execTryApplyModifierToTarget) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ModifierClass); \
-		P_GET_OBJECT(AActor,Z_Param_Target); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=UBPF_Modifier::TryApplyModifierToTarget(Z_Param_ModifierClass,Z_Param_Target,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execTryRemoveModifierByTypeFromTarget); \
+	DECLARE_FUNCTION(execTryRemoveModifierFromTarget); \
+	DECLARE_FUNCTION(execTryApplyModifierToTarget);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_INCLASS_NO_PURE_DECLS \
@@ -134,6 +81,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBPF_Modifier); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_INCLASS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_STANDARD_CONSTRUCTORS \
@@ -145,6 +93,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_INCLASS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_BPF_Modifier_h_17_ENHANCED_CONSTRUCTORS \

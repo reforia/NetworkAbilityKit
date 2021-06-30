@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,9 +17,21 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 	NETWORKABILITYKIT_API UClass* Z_Construct_UClass_AGM_Arena();
 	ENGINE_API UClass* Z_Construct_UClass_AGameMode();
 	UPackage* Z_Construct_UPackage__Script_NetworkAbilityKit();
-	NETWORKABILITYKIT_API UFunction* Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AGM_Arena::execSERVER_SpawnPlayer)
+	{
+		P_GET_OBJECT(APlayerController,Z_Param_PlayerController);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->SERVER_SpawnPlayer_Validate(Z_Param_PlayerController))
+		{
+			RPC_ValidateFailed(TEXT("SERVER_SpawnPlayer_Validate"));
+			return;
+		}
+		P_THIS->SERVER_SpawnPlayer_Implementation(Z_Param_PlayerController);
+		P_NATIVE_END;
+	}
 	static FName NAME_AGM_Arena_SERVER_SpawnPlayer = FName(TEXT("SERVER_SpawnPlayer"));
 	void AGM_Arena::SERVER_SpawnPlayer(APlayerController* PlayerController)
 	{
@@ -33,7 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SERVER_SpawnPlayer", &AGM_Arena::execSERVER_SpawnPlayer },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics
 	{
@@ -54,7 +66,7 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 		{ "ModuleRelativePath", "Public/GM_Arena.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGM_Arena, nullptr, "SERVER_SpawnPlayer", nullptr, nullptr, sizeof(GM_Arena_eventSERVER_SpawnPlayer_Parms), Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGM_Arena, nullptr, "SERVER_SpawnPlayer", nullptr, nullptr, sizeof(GM_Arena_eventSERVER_SpawnPlayer_Parms), Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -83,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_NetworkAbilityKit,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGM_Arena_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer, "SERVER_SpawnPlayer" }, // 419122489
+		{ &Z_Construct_UFunction_AGM_Arena_SERVER_SpawnPlayer, "SERVER_SpawnPlayer" }, // 1440486662
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGM_Arena_Statics::Class_MetaDataParams[] = {
@@ -106,12 +118,12 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009002ACu,
-		METADATA_PARAMS(Z_Construct_UClass_AGM_Arena_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AGM_Arena_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_AGM_Arena_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AGM_Arena_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AGM_Arena()
 	{
@@ -122,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeGM_Arena() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGM_Arena, 3600174767);
+	IMPLEMENT_CLASS(AGM_Arena, 2985405757);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<AGM_Arena>()
 	{
 		return AGM_Arena::StaticClass();

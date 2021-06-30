@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,37 +20,15 @@ static inline void FFinishedInitializeAbilitySetDelegate_DelegateWrapper(const F
 }
 
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_RPC_WRAPPERS \
 	virtual bool CLIENT_BroadcastFinishedInitializationEvent_Validate(); \
 	virtual void CLIENT_BroadcastFinishedInitializationEvent_Implementation(); \
 	virtual bool InitializeAbilitySet_Validate(); \
 	virtual void InitializeAbilitySet_Implementation(); \
  \
-	DECLARE_FUNCTION(execCLIENT_BroadcastFinishedInitializationEvent) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_BroadcastFinishedInitializationEvent_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_BroadcastFinishedInitializationEvent_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_BroadcastFinishedInitializationEvent_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAbilitySet) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->InitializeAbilitySet_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("InitializeAbilitySet_Validate")); \
-			return; \
-		} \
-		P_THIS->InitializeAbilitySet_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCLIENT_BroadcastFinishedInitializationEvent); \
+	DECLARE_FUNCTION(execInitializeAbilitySet);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -59,31 +37,8 @@ static inline void FFinishedInitializeAbilitySetDelegate_DelegateWrapper(const F
 	virtual bool InitializeAbilitySet_Validate(); \
 	virtual void InitializeAbilitySet_Implementation(); \
  \
-	DECLARE_FUNCTION(execCLIENT_BroadcastFinishedInitializationEvent) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_BroadcastFinishedInitializationEvent_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_BroadcastFinishedInitializationEvent_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_BroadcastFinishedInitializationEvent_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAbilitySet) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->InitializeAbilitySet_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("InitializeAbilitySet_Validate")); \
-			return; \
-		} \
-		P_THIS->InitializeAbilitySet_Implementation(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execCLIENT_BroadcastFinishedInitializationEvent); \
+	DECLARE_FUNCTION(execInitializeAbilitySet);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_EVENT_PARMS
@@ -95,7 +50,13 @@ private: \
 public: \
 	DECLARE_CLASS(UAbilitySetComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UAbilitySetComp) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AbilitySetObject=NETFIELD_REP_START, \
+		NETFIELD_REP_END=AbilitySetObject	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_INCLASS \
@@ -105,7 +66,13 @@ private: \
 public: \
 	DECLARE_CLASS(UAbilitySetComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UAbilitySetComp) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AbilitySetObject=NETFIELD_REP_START, \
+		NETFIELD_REP_END=AbilitySetObject	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_STANDARD_CONSTRUCTORS \
@@ -141,6 +108,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAbilitySetComp); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_INCLASS \
@@ -153,6 +121,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilitySetComp_h_16_INCLASS_NO_PURE_DECLS \

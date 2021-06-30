@@ -1,7 +1,7 @@
 {
-	"BuildId": "8386587",
+	"BuildId": "14830424",
 	"Modules": 
 	{
-		"NetworkAbilityKit": "UE4Editor-NetworkAbilityKit-0010.dll"
+		"NetworkAbilityKit": "UE4Editor-NetworkAbilityKit.dll"
 	}
 }

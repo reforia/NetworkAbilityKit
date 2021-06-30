@@ -136,7 +136,7 @@ void APlayerHeroBase::PossessedBy(AController* NewController)
 
 float APlayerHeroBase::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser)
 {
-	if (Role != ROLE_Authority)
+	if (HasAuthority())
 	{
 		return 0.0f;
 	}

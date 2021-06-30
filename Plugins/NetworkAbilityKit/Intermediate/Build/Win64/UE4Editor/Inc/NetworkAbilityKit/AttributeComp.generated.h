@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -13,58 +13,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORKABILITYKIT_AttributeComp_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execInitializeStatusPreset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeStatusPreset(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAttributePreset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeAttributePreset(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAttributeComp) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeAttributeComp(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execInitializeStatusPreset); \
+	DECLARE_FUNCTION(execInitializeAttributePreset); \
+	DECLARE_FUNCTION(execInitializeAttributeComp);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execInitializeStatusPreset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeStatusPreset(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAttributePreset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeAttributePreset(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializeAttributeComp) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializeAttributeComp(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execInitializeStatusPreset); \
+	DECLARE_FUNCTION(execInitializeAttributePreset); \
+	DECLARE_FUNCTION(execInitializeAttributeComp);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_INCLASS_NO_PURE_DECLS \
@@ -74,7 +35,14 @@ private: \
 public: \
 	DECLARE_CLASS(UAttributeComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UAttributeComp) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AttributePreset=NETFIELD_REP_START, \
+		StatusPreset, \
+		NETFIELD_REP_END=StatusPreset	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_INCLASS \
@@ -84,7 +52,14 @@ private: \
 public: \
 	DECLARE_CLASS(UAttributeComp, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(UAttributeComp) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AttributePreset=NETFIELD_REP_START, \
+		StatusPreset, \
+		NETFIELD_REP_END=StatusPreset	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_STANDARD_CONSTRUCTORS \
@@ -117,6 +92,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAttributeComp); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_INCLASS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_STANDARD_CONSTRUCTORS \
@@ -128,6 +104,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_INCLASS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeComp_h_13_ENHANCED_CONSTRUCTORS \

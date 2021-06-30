@@ -274,7 +274,7 @@ void AAbilityBase::CoolDownCycleTick()
 
 void AAbilityBase::ApplyCost_Implementation()
 {
-	if (Role == ROLE_Authority)
+	if (HasAuthority())
 	{
 		bool bHasEnoughCost = true;
 		if (!PairAttrSet)

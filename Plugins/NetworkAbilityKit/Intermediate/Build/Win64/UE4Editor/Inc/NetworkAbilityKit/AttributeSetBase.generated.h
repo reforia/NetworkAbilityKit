@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -15,62 +15,17 @@ class UFloatProperty;
 #endif
 #define NETWORKABILITYKIT_AttributeSetBase_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_RPC_WRAPPERS \
 	virtual bool SetFloatAttributeValueByName_Validate(FName , EAttrModifyMethod , float ); \
 	virtual void SetFloatAttributeValueByName_Implementation(FName PropName, EAttrModifyMethod ModifyMethod, float ModifyValue); \
 	virtual bool SetFloatAttributeValue_Validate(UFloatProperty* , float ); \
 	virtual void SetFloatAttributeValue_Implementation(UFloatProperty* FloatProp, float NewValue); \
  \
-	DECLARE_FUNCTION(execSetFloatAttributeValueByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropName); \
-		P_GET_ENUM(EAttrModifyMethod,Z_Param_ModifyMethod); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_ModifyValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetFloatAttributeValueByName_Validate(Z_Param_PropName,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetFloatAttributeValueByName_Validate")); \
-			return; \
-		} \
-		P_THIS->SetFloatAttributeValueByName_Implementation(Z_Param_PropName,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetFloatAttributeValue) \
-	{ \
-		P_GET_OBJECT(UFloatProperty,Z_Param_FloatProp); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_NewValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetFloatAttributeValue_Validate(Z_Param_FloatProp,Z_Param_NewValue)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetFloatAttributeValue_Validate")); \
-			return; \
-		} \
-		P_THIS->SetFloatAttributeValue_Implementation(Z_Param_FloatProp,Z_Param_NewValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTmpValueAfterModifiedFloatAttribute) \
-	{ \
-		P_GET_OBJECT(UFloatProperty,Z_Param_FloatProp); \
-		P_GET_ENUM(EAttrModifyMethod,Z_Param_ModifyMethod); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_ModifyValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetTmpValueAfterModifiedFloatAttribute(Z_Param_FloatProp,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFloatAttribute) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropertyName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UFloatProperty**)Z_Param__Result=P_THIS->GetFloatAttribute(Z_Param_PropertyName); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetFloatAttributeValueByName); \
+	DECLARE_FUNCTION(execSetFloatAttributeValue); \
+	DECLARE_FUNCTION(execGetTmpValueAfterModifiedFloatAttribute); \
+	DECLARE_FUNCTION(execGetFloatAttribute);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -79,56 +34,10 @@ class UFloatProperty;
 	virtual bool SetFloatAttributeValue_Validate(UFloatProperty* , float ); \
 	virtual void SetFloatAttributeValue_Implementation(UFloatProperty* FloatProp, float NewValue); \
  \
-	DECLARE_FUNCTION(execSetFloatAttributeValueByName) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropName); \
-		P_GET_ENUM(EAttrModifyMethod,Z_Param_ModifyMethod); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_ModifyValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetFloatAttributeValueByName_Validate(Z_Param_PropName,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetFloatAttributeValueByName_Validate")); \
-			return; \
-		} \
-		P_THIS->SetFloatAttributeValueByName_Implementation(Z_Param_PropName,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetFloatAttributeValue) \
-	{ \
-		P_GET_OBJECT(UFloatProperty,Z_Param_FloatProp); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_NewValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SetFloatAttributeValue_Validate(Z_Param_FloatProp,Z_Param_NewValue)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SetFloatAttributeValue_Validate")); \
-			return; \
-		} \
-		P_THIS->SetFloatAttributeValue_Implementation(Z_Param_FloatProp,Z_Param_NewValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetTmpValueAfterModifiedFloatAttribute) \
-	{ \
-		P_GET_OBJECT(UFloatProperty,Z_Param_FloatProp); \
-		P_GET_ENUM(EAttrModifyMethod,Z_Param_ModifyMethod); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_ModifyValue); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->GetTmpValueAfterModifiedFloatAttribute(Z_Param_FloatProp,EAttrModifyMethod(Z_Param_ModifyMethod),Z_Param_ModifyValue); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execGetFloatAttribute) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_PropertyName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(UFloatProperty**)Z_Param__Result=P_THIS->GetFloatAttribute(Z_Param_PropertyName); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execSetFloatAttributeValueByName); \
+	DECLARE_FUNCTION(execSetFloatAttributeValue); \
+	DECLARE_FUNCTION(execGetTmpValueAfterModifiedFloatAttribute); \
+	DECLARE_FUNCTION(execGetFloatAttribute);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_EVENT_PARMS \
@@ -151,9 +60,15 @@ private: \
 	static void StaticRegisterNativesAAttributeSetBase(); \
 	friend struct Z_Construct_UClass_AAttributeSetBase_Statics; \
 public: \
-	DECLARE_CLASS(AAttributeSetBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAttributeSetBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAttributeSetBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		BelongingActor=NETFIELD_REP_START, \
+		NETFIELD_REP_END=BelongingActor	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_INCLASS \
@@ -161,9 +76,15 @@ private: \
 	static void StaticRegisterNativesAAttributeSetBase(); \
 	friend struct Z_Construct_UClass_AAttributeSetBase_Statics; \
 public: \
-	DECLARE_CLASS(AAttributeSetBase, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(AAttributeSetBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(AAttributeSetBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		BelongingActor=NETFIELD_REP_START, \
+		NETFIELD_REP_END=BelongingActor	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_STANDARD_CONSTRUCTORS \
@@ -199,6 +120,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAttributeSetBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_INCLASS \
@@ -211,6 +133,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AttributeSetBase_h_13_INCLASS_NO_PURE_DECLS \

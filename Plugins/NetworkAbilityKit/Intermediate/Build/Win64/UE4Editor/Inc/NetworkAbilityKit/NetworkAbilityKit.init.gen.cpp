@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -29,10 +29,10 @@ void EmptyLinkFunctionForGeneratedCodeNetworkAbilityKit_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/NetworkAbilityKit",
 				SingletonFuncArray,
-				ARRAY_COUNT(SingletonFuncArray),
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x6C899BEA,
-				0x04362477,
+				0xE5096F88,
+				0x07C3DB52,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -58,12 +58,12 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Login() {}
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
 		0x009002ACu,
-		METADATA_PARAMS(Z_Construct_UClass_AHUD_Login_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AHUD_Login_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_AHUD_Login_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AHUD_Login_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AHUD_Login()
 	{
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Login() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHUD_Login, 2622916235);
+	IMPLEMENT_CLASS(AHUD_Login, 2693811115);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<AHUD_Login>()
 	{
 		return AHUD_Login::StaticClass();

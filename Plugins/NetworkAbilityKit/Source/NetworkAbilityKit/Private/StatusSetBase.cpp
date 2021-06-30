@@ -27,7 +27,7 @@ void AStatusSetBase::BeginPlay()
 	
 }
 
-void AStatusSetBase::GetBoolAttribute(const FName PropertyName, bool& Success, UBoolProperty*& BoolProp, bool& AttributeValue)
+void AStatusSetBase::GetBoolAttribute(const FName PropertyName, bool& Success, FBoolProperty*& BoolProp, bool& AttributeValue)
 {
 	Success = false;
 
@@ -46,7 +46,7 @@ void AStatusSetBase::GetBoolAttribute(const FName PropertyName, bool& Success, U
 		return;
 	}
 
-	if (!Cast<UBoolProperty>(Property))
+	if (!Cast<FBoolProperty>(Property))
 	{
 		UE_LOG(LogTemp, Log, TEXT("Property Not A BoolProp"));
 		Success = false;
@@ -54,12 +54,12 @@ void AStatusSetBase::GetBoolAttribute(const FName PropertyName, bool& Success, U
 	}
 
 	Success = true;
-	BoolProp = Cast<UBoolProperty>(Property);
+	BoolProp = Cast<FBoolProperty>(Property);
 	AttributeValue = GetBoolAttributeValue(BoolProp);
 	return;
 }
 
-bool AStatusSetBase::GetBoolAttributeValue(UBoolProperty* BoolProp)
+bool AStatusSetBase::GetBoolAttributeValue(FBoolProperty* BoolProp)
 {
 	if (!BoolProp)
 	{
@@ -72,11 +72,11 @@ bool AStatusSetBase::GetBoolAttributeValue(UBoolProperty* BoolProp)
 void AStatusSetBase::SetBoolAttributeByName_Implementation(FName PropName, bool bNewBool)
 {
 	UE_LOG(LogTemp, Log, TEXT("Running Logic"));
-	if (Role == ROLE_Authority)
+	if (HasAuthority())
 	{
 		UE_LOG(LogTemp, Log, TEXT("Running Logic On Server"));
 		bool Success = false;
-		UBoolProperty* BoolProp;
+		FBoolProperty* BoolProp;
 		bool PropValue = false;
 		GetBoolAttribute(PropName, Success, BoolProp, PropValue);
 		if (Success)
@@ -100,7 +100,7 @@ bool AStatusSetBase::SetBoolAttributeByName_Validate(FName PropName, bool bNewBo
 	return true;
 }
 
-void AStatusSetBase::SetBoolAttribute_Implementation(UBoolProperty* BoolProp, bool bNewBool)
+void AStatusSetBase::SetBoolAttribute_Implementation(FBoolProperty* BoolProp, bool bNewBool)
 {
 	//UE_LOG(LogTemp, Log, TEXT("Float Property Value Set"));
 	if (GetBoolAttributeValue(BoolProp) == bNewBool)
@@ -111,17 +111,17 @@ void AStatusSetBase::SetBoolAttribute_Implementation(UBoolProperty* BoolProp, bo
 	Multicast_SetBoolAttribute(BoolProp, bNewBool);
 }
 
-bool AStatusSetBase::SetBoolAttribute_Validate(UBoolProperty* BoolProp, bool bNewBool)
+bool AStatusSetBase::SetBoolAttribute_Validate(FBoolProperty* BoolProp, bool bNewBool)
 {
 	return true;
 }
 
-void AStatusSetBase::Multicast_SetBoolAttribute_Implementation(UBoolProperty* BoolProp, bool bNewBool)
+void AStatusSetBase::Multicast_SetBoolAttribute_Implementation(FBoolProperty* BoolProp, bool bNewBool)
 {
 	BoolProp->SetPropertyValue_InContainer(this, bNewBool);
 }
 
-bool AStatusSetBase::Multicast_SetBoolAttribute_Validate(UBoolProperty* BoolProp, bool bNewBool)
+bool AStatusSetBase::Multicast_SetBoolAttribute_Validate(FBoolProperty* BoolProp, bool bNewBool)
 {
 	return true;
 }

@@ -4,6 +4,7 @@
 
 
 #include "FogOfWarWorker.h"
+#include "FogOfWarManager.h"
 
 AFogOfWarWorker::AFogOfWarWorker() {}
 

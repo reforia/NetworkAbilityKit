@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,6 +14,7 @@ class APawn;
 #endif
 #define NETWORKABILITYKIT_PlayerHeroControllerBase_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_RPC_WRAPPERS \
 	virtual void UpdatePlayerCameraOffset_Implementation(); \
 	virtual bool CLIENT_PostInitialization_Validate(); \
@@ -23,86 +24,14 @@ class APawn;
 	virtual bool CLIENT_PostLogin_Validate(); \
 	virtual void CLIENT_PostLogin_Implementation(); \
  \
-	DECLARE_FUNCTION(execEssentialFrameworkInitialization) \
-	{ \
-		P_GET_OBJECT(APawn,Z_Param_aPawn); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->EssentialFrameworkInitialization(Z_Param_aPawn); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdatePlayerCameraOffset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdatePlayerCameraOffset_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdateControlRotation) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateControlRotation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdateCursorInfo) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateCursorInfo(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCLIENT_PostInitialization) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_PostInitialization_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_PostInitialization_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_PostInitialization_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_PostLogin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_PostLogin_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_PostLogin_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_PostLogin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCLIENT_PostLogin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_PostLogin_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_PostLogin_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_PostLogin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayerRefInitialization) \
-	{ \
-		P_GET_OBJECT(APawn,Z_Param_PossessedPawn); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PlayerRefInitialization(Z_Param_PossessedPawn); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execEssentialFrameworkInitialization); \
+	DECLARE_FUNCTION(execUpdatePlayerCameraOffset); \
+	DECLARE_FUNCTION(execUpdateControlRotation); \
+	DECLARE_FUNCTION(execUpdateCursorInfo); \
+	DECLARE_FUNCTION(execCLIENT_PostInitialization); \
+	DECLARE_FUNCTION(execSERVER_PostLogin); \
+	DECLARE_FUNCTION(execCLIENT_PostLogin); \
+	DECLARE_FUNCTION(execPlayerRefInitialization);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -114,86 +43,14 @@ class APawn;
 	virtual bool CLIENT_PostLogin_Validate(); \
 	virtual void CLIENT_PostLogin_Implementation(); \
  \
-	DECLARE_FUNCTION(execEssentialFrameworkInitialization) \
-	{ \
-		P_GET_OBJECT(APawn,Z_Param_aPawn); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->EssentialFrameworkInitialization(Z_Param_aPawn); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdatePlayerCameraOffset) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdatePlayerCameraOffset_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdateControlRotation) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateControlRotation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execUpdateCursorInfo) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateCursorInfo(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCLIENT_PostInitialization) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_PostInitialization_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_PostInitialization_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_PostInitialization_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_PostLogin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_PostLogin_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_PostLogin_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_PostLogin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCLIENT_PostLogin) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->CLIENT_PostLogin_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("CLIENT_PostLogin_Validate")); \
-			return; \
-		} \
-		P_THIS->CLIENT_PostLogin_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayerRefInitialization) \
-	{ \
-		P_GET_OBJECT(APawn,Z_Param_PossessedPawn); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->PlayerRefInitialization(Z_Param_PossessedPawn); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execEssentialFrameworkInitialization); \
+	DECLARE_FUNCTION(execUpdatePlayerCameraOffset); \
+	DECLARE_FUNCTION(execUpdateControlRotation); \
+	DECLARE_FUNCTION(execUpdateCursorInfo); \
+	DECLARE_FUNCTION(execCLIENT_PostInitialization); \
+	DECLARE_FUNCTION(execSERVER_PostLogin); \
+	DECLARE_FUNCTION(execCLIENT_PostLogin); \
+	DECLARE_FUNCTION(execPlayerRefInitialization);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_EVENT_PARMS
@@ -205,7 +62,14 @@ private: \
 public: \
 	DECLARE_CLASS(APlayerHeroControllerBase, APlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APlayerHeroControllerBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		PlayerRef=NETFIELD_REP_START, \
+		PlayerInitialized, \
+		NETFIELD_REP_END=PlayerInitialized	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_INCLASS \
@@ -215,7 +79,14 @@ private: \
 public: \
 	DECLARE_CLASS(APlayerHeroControllerBase, APlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APlayerHeroControllerBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		PlayerRef=NETFIELD_REP_START, \
+		PlayerInitialized, \
+		NETFIELD_REP_END=PlayerInitialized	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_STANDARD_CONSTRUCTORS \
@@ -261,6 +132,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerHeroControllerBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_INCLASS \
@@ -273,6 +145,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroControllerBase_h_18_INCLASS_NO_PURE_DECLS \

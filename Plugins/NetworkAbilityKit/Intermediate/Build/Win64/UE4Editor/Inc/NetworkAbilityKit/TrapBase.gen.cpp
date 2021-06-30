@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,9 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeTrapBase() {}
 	NETWORKABILITYKIT_API UClass* Z_Construct_UClass_ATrapBase();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_NetworkAbilityKit();
-	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
 	void ATrapBase::StaticRegisterNativesATrapBase()
 	{
@@ -35,21 +35,21 @@ void EmptyLinkFunctionForGeneratedCodeTrapBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BelongingControllerActor_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereCollision_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BelongingControllerActor;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LifeSpan_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LifeSpan;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereCollision;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaticMeshComp_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComp;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereCollision_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LifeSpan_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereCollision;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LifeSpan;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BelongingControllerActor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BelongingControllerActor;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -65,19 +65,13 @@ void EmptyLinkFunctionForGeneratedCodeTrapBase() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData[] = {
-		{ "Category", "Parent" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData[] = {
+		{ "Category", "Collision" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/TrapBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor = { "BelongingControllerActor", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, BelongingControllerActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData[] = {
-		{ "Category", "LifeCycle" },
-		{ "ModuleRelativePath", "Public/TrapBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan = { "LifeSpan", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, LifeSpan), METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision = { "SphereCollision", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, SphereCollision), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp_MetaData[] = {
 		{ "Category", "Component" },
@@ -85,38 +79,44 @@ void EmptyLinkFunctionForGeneratedCodeTrapBase() {}
 		{ "ModuleRelativePath", "Public/TrapBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp = { "StaticMeshComp", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, StaticMeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp = { "StaticMeshComp", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, StaticMeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData[] = {
-		{ "Category", "Collision" },
-		{ "EditInline", "true" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData[] = {
+		{ "Category", "LifeCycle" },
 		{ "ModuleRelativePath", "Public/TrapBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision = { "SphereCollision", nullptr, (EPropertyFlags)0x00100000000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, SphereCollision), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan = { "LifeSpan", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, LifeSpan), METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData[] = {
+		{ "Category", "Parent" },
+		{ "ModuleRelativePath", "Public/TrapBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor = { "BelongingControllerActor", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATrapBase, BelongingControllerActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATrapBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_SphereCollision,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_StaticMeshComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_LifeSpan,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATrapBase_Statics::NewProp_BelongingControllerActor,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATrapBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATrapBase>::IsAbstract,
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ATrapBase_Statics::ClassParams = {
 		&ATrapBase::StaticClass,
-		nullptr,
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ATrapBase_Statics::PropPointers,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::PropPointers),
+		UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::PropPointers),
 		0,
-		0x009000A0u,
-		METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::Class_MetaDataParams))
+		0x009000A4u,
+		METADATA_PARAMS(Z_Construct_UClass_ATrapBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ATrapBase_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ATrapBase()
 	{
@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeTrapBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATrapBase, 971976519);
+	IMPLEMENT_CLASS(ATrapBase, 4021279822);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<ATrapBase>()
 	{
 		return ATrapBase::StaticClass();

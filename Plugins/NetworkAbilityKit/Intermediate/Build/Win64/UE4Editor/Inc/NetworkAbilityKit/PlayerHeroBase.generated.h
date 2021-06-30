@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -14,46 +14,17 @@ struct FVector;
 #endif
 #define NETWORKABILITYKIT_PlayerHeroBase_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execUpdateCameraOffset) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_CursorDirectionNormalized); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DistanceProportion); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateCameraOffset(Z_Param_CursorDirectionNormalized,Z_Param_DistanceProportion); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializePlayer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializePlayer(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execUpdateCameraOffset); \
+	DECLARE_FUNCTION(execInitializePlayer);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execUpdateCameraOffset) \
-	{ \
-		P_GET_STRUCT(FVector,Z_Param_CursorDirectionNormalized); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DistanceProportion); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateCameraOffset(Z_Param_CursorDirectionNormalized,Z_Param_DistanceProportion); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execInitializePlayer) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->InitializePlayer(); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execUpdateCameraOffset); \
+	DECLARE_FUNCTION(execInitializePlayer);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_INCLASS_NO_PURE_DECLS \
@@ -61,9 +32,16 @@ private: \
 	static void StaticRegisterNativesAPlayerHeroBase(); \
 	friend struct Z_Construct_UClass_APlayerHeroBase_Statics; \
 public: \
-	DECLARE_CLASS(APlayerHeroBase, ACharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(APlayerHeroBase, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APlayerHeroBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AbilityComp=NETFIELD_REP_START, \
+		AttributeComp, \
+		NETFIELD_REP_END=AttributeComp	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_INCLASS \
@@ -71,9 +49,16 @@ private: \
 	static void StaticRegisterNativesAPlayerHeroBase(); \
 	friend struct Z_Construct_UClass_APlayerHeroBase_Statics; \
 public: \
-	DECLARE_CLASS(APlayerHeroBase, ACharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
+	DECLARE_CLASS(APlayerHeroBase, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NetworkAbilityKit"), NO_API) \
 	DECLARE_SERIALIZER(APlayerHeroBase) \
-	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AbilityComp=NETFIELD_REP_START, \
+		AttributeComp, \
+		NETFIELD_REP_END=AttributeComp	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_STANDARD_CONSTRUCTORS \
@@ -106,6 +91,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerHeroBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_INCLASS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_STANDARD_CONSTRUCTORS \
@@ -117,6 +103,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_INCLASS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_PlayerHeroBase_h_20_ENHANCED_CONSTRUCTORS \

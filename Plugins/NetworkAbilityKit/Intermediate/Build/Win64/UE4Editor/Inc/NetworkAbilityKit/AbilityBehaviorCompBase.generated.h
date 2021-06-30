@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -20,6 +20,7 @@ class AAbilityBase;
 #endif
 #define NETWORKABILITYKIT_AbilityBehaviorCompBase_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_RPC_WRAPPERS \
 	virtual bool MULTICAST_PlayMontage_Validate(USkeletalMeshComponent* , UAnimMontage* ); \
 	virtual void MULTICAST_PlayMontage_Implementation(USkeletalMeshComponent* SkeletalMeshComp, UAnimMontage* MontageToPlay); \
@@ -38,129 +39,14 @@ class AAbilityBase;
 	virtual bool SERVER_TryActivateAbility_Validate(AAbilityBase* ); \
 	virtual void SERVER_TryActivateAbility_Implementation(AAbilityBase* Ability); \
  \
-	DECLARE_FUNCTION(execMULTICAST_PlayMontage) \
-	{ \
-		P_GET_OBJECT(USkeletalMeshComponent,Z_Param_SkeletalMeshComp); \
-		P_GET_OBJECT(UAnimMontage,Z_Param_MontageToPlay); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->MULTICAST_PlayMontage_Validate(Z_Param_SkeletalMeshComp,Z_Param_MontageToPlay)) \
-		{ \
-			RPC_ValidateFailed(TEXT("MULTICAST_PlayMontage_Validate")); \
-			return; \
-		} \
-		P_THIS->MULTICAST_PlayMontage_Implementation(Z_Param_SkeletalMeshComp,Z_Param_MontageToPlay); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_DashTowards) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_ActorToDash); \
-		P_GET_STRUCT(FVector,Z_Param_DashVector); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Velocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_DashTowards_Validate(Z_Param_ActorToDash,Z_Param_DashVector,Z_Param_Velocity)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_DashTowards_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_DashTowards_Implementation(Z_Param_ActorToDash,Z_Param_DashVector,Z_Param_Velocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_Teleport) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_ActorToTeleport); \
-		P_GET_STRUCT(FVector,Z_Param_TeleportLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_Teleport_Validate(Z_Param_ActorToTeleport,Z_Param_TeleportLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_Teleport_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_Teleport_Implementation(Z_Param_ActorToTeleport,Z_Param_TeleportLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_ApplyDamage) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_DamagedActor); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DamageAmount); \
-		P_GET_OBJECT(AController,Z_Param_EventInstigator); \
-		P_GET_OBJECT(AActor,Z_Param_DamageCauser); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_ApplyDamage_Validate(Z_Param_DamagedActor,Z_Param_DamageAmount,Z_Param_EventInstigator,Z_Param_DamageCauser)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_ApplyDamage_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_ApplyDamage_Implementation(Z_Param_DamagedActor,Z_Param_DamageAmount,Z_Param_EventInstigator,Z_Param_DamageCauser); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnTrap) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_TrapClass); \
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnTrap_Validate(Z_Param_TrapClass,Z_Param_SpawnLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnTrap_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnTrap_Implementation(Z_Param_TrapClass,Z_Param_SpawnLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnActor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ActorClass); \
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnActor_Validate(Z_Param_ActorClass,Z_Param_SpawnLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnActor_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnActor_Implementation(Z_Param_ActorClass,Z_Param_SpawnLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnProjectile) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ProjectileClass); \
-		P_GET_STRUCT(FVector,Z_Param_ForwardVector); \
-		P_GET_STRUCT(FRotator,Z_Param_DesiredRotation); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_SpawningForwardBias); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnProjectile_Validate(Z_Param_ProjectileClass,Z_Param_ForwardVector,Z_Param_DesiredRotation,Z_Param_SpawningForwardBias)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnProjectile_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnProjectile_Implementation(Z_Param_ProjectileClass,Z_Param_ForwardVector,Z_Param_DesiredRotation,Z_Param_SpawningForwardBias); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_TryActivateAbility) \
-	{ \
-		P_GET_OBJECT(AAbilityBase,Z_Param_Ability); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_TryActivateAbility_Validate(Z_Param_Ability)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_TryActivateAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_TryActivateAbility_Implementation(Z_Param_Ability); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execMULTICAST_PlayMontage); \
+	DECLARE_FUNCTION(execSERVER_DashTowards); \
+	DECLARE_FUNCTION(execSERVER_Teleport); \
+	DECLARE_FUNCTION(execSERVER_ApplyDamage); \
+	DECLARE_FUNCTION(execSERVER_SpawnTrap); \
+	DECLARE_FUNCTION(execSERVER_SpawnActor); \
+	DECLARE_FUNCTION(execSERVER_SpawnProjectile); \
+	DECLARE_FUNCTION(execSERVER_TryActivateAbility);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -181,129 +67,14 @@ class AAbilityBase;
 	virtual bool SERVER_TryActivateAbility_Validate(AAbilityBase* ); \
 	virtual void SERVER_TryActivateAbility_Implementation(AAbilityBase* Ability); \
  \
-	DECLARE_FUNCTION(execMULTICAST_PlayMontage) \
-	{ \
-		P_GET_OBJECT(USkeletalMeshComponent,Z_Param_SkeletalMeshComp); \
-		P_GET_OBJECT(UAnimMontage,Z_Param_MontageToPlay); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->MULTICAST_PlayMontage_Validate(Z_Param_SkeletalMeshComp,Z_Param_MontageToPlay)) \
-		{ \
-			RPC_ValidateFailed(TEXT("MULTICAST_PlayMontage_Validate")); \
-			return; \
-		} \
-		P_THIS->MULTICAST_PlayMontage_Implementation(Z_Param_SkeletalMeshComp,Z_Param_MontageToPlay); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_DashTowards) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_ActorToDash); \
-		P_GET_STRUCT(FVector,Z_Param_DashVector); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Velocity); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_DashTowards_Validate(Z_Param_ActorToDash,Z_Param_DashVector,Z_Param_Velocity)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_DashTowards_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_DashTowards_Implementation(Z_Param_ActorToDash,Z_Param_DashVector,Z_Param_Velocity); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_Teleport) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_ActorToTeleport); \
-		P_GET_STRUCT(FVector,Z_Param_TeleportLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_Teleport_Validate(Z_Param_ActorToTeleport,Z_Param_TeleportLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_Teleport_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_Teleport_Implementation(Z_Param_ActorToTeleport,Z_Param_TeleportLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_ApplyDamage) \
-	{ \
-		P_GET_OBJECT(AActor,Z_Param_DamagedActor); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_DamageAmount); \
-		P_GET_OBJECT(AController,Z_Param_EventInstigator); \
-		P_GET_OBJECT(AActor,Z_Param_DamageCauser); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_ApplyDamage_Validate(Z_Param_DamagedActor,Z_Param_DamageAmount,Z_Param_EventInstigator,Z_Param_DamageCauser)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_ApplyDamage_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_ApplyDamage_Implementation(Z_Param_DamagedActor,Z_Param_DamageAmount,Z_Param_EventInstigator,Z_Param_DamageCauser); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnTrap) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_TrapClass); \
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnTrap_Validate(Z_Param_TrapClass,Z_Param_SpawnLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnTrap_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnTrap_Implementation(Z_Param_TrapClass,Z_Param_SpawnLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnActor) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ActorClass); \
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnActor_Validate(Z_Param_ActorClass,Z_Param_SpawnLocation)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnActor_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnActor_Implementation(Z_Param_ActorClass,Z_Param_SpawnLocation); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_SpawnProjectile) \
-	{ \
-		P_GET_OBJECT(UClass,Z_Param_ProjectileClass); \
-		P_GET_STRUCT(FVector,Z_Param_ForwardVector); \
-		P_GET_STRUCT(FRotator,Z_Param_DesiredRotation); \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_SpawningForwardBias); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_SpawnProjectile_Validate(Z_Param_ProjectileClass,Z_Param_ForwardVector,Z_Param_DesiredRotation,Z_Param_SpawningForwardBias)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_SpawnProjectile_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_SpawnProjectile_Implementation(Z_Param_ProjectileClass,Z_Param_ForwardVector,Z_Param_DesiredRotation,Z_Param_SpawningForwardBias); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSERVER_TryActivateAbility) \
-	{ \
-		P_GET_OBJECT(AAbilityBase,Z_Param_Ability); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->SERVER_TryActivateAbility_Validate(Z_Param_Ability)) \
-		{ \
-			RPC_ValidateFailed(TEXT("SERVER_TryActivateAbility_Validate")); \
-			return; \
-		} \
-		P_THIS->SERVER_TryActivateAbility_Implementation(Z_Param_Ability); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execMULTICAST_PlayMontage); \
+	DECLARE_FUNCTION(execSERVER_DashTowards); \
+	DECLARE_FUNCTION(execSERVER_Teleport); \
+	DECLARE_FUNCTION(execSERVER_ApplyDamage); \
+	DECLARE_FUNCTION(execSERVER_SpawnTrap); \
+	DECLARE_FUNCTION(execSERVER_SpawnActor); \
+	DECLARE_FUNCTION(execSERVER_SpawnProjectile); \
+	DECLARE_FUNCTION(execSERVER_TryActivateAbility);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_EVENT_PARMS \
@@ -405,6 +176,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAbilityBehaviorCompBase); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_INCLASS \
@@ -417,6 +189,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_PRIVATE_PROPERTY_OFFSET \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_AbilityBehaviorCompBase_h_16_INCLASS_NO_PURE_DECLS \

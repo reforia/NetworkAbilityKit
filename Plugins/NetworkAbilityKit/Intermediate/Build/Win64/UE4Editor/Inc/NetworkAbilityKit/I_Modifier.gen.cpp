@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -17,13 +17,35 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 	NETWORKABILITYKIT_API UClass* Z_Construct_UClass_UI_Modifier();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 	UPackage* Z_Construct_UPackage__Script_NetworkAbilityKit();
-	NETWORKABILITYKIT_API UFunction* Z_Construct_UFunction_UI_Modifier_OnReceivedModifier();
-	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	NETWORKABILITYKIT_API UClass* Z_Construct_UClass_AModifierBase_NoRegister();
-	NETWORKABILITYKIT_API UFunction* Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier();
-	NETWORKABILITYKIT_API UFunction* Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	NETWORKABILITYKIT_API UEnum* Z_Construct_UEnum_NetworkAbilityKit_EModifierType();
 // End Cross Module References
+	DEFINE_FUNCTION(II_Modifier::execOnTryRemoveModifierByType)
+	{
+		P_GET_ENUM(EModifierType,Z_Param_ModifierType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnTryRemoveModifierByType_Implementation(EModifierType(Z_Param_ModifierType));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(II_Modifier::execOnTryRemoveModifier)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_ModifierName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnTryRemoveModifier_Implementation(Z_Param_ModifierName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(II_Modifier::execOnReceivedModifier)
+	{
+		P_GET_OBJECT(AModifierBase,Z_Param_Modifier);
+		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnReceivedModifier_Implementation(Z_Param_Modifier,Z_Param_ModifierInstigator);
+		P_NATIVE_END;
+	}
 	void II_Modifier::OnReceivedModifier(AModifierBase* Modifier, AActor* ModifierInstigator)
 	{
 		check(0 && "Do not directly call Event functions in Interfaces. Call Execute_OnReceivedModifier instead.");
@@ -44,23 +66,23 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 			{ "OnTryRemoveModifier", &II_Modifier::execOnTryRemoveModifier },
 			{ "OnTryRemoveModifierByType", &II_Modifier::execOnTryRemoveModifierByType },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics
 	{
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ModifierInstigator;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Modifier;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ModifierInstigator;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_ModifierInstigator = { "ModifierInstigator", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(I_Modifier_eventOnReceivedModifier_Parms, ModifierInstigator), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_Modifier = { "Modifier", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(I_Modifier_eventOnReceivedModifier_Parms, Modifier), Z_Construct_UClass_AModifierBase_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_ModifierInstigator = { "ModifierInstigator", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(I_Modifier_eventOnReceivedModifier_Parms, ModifierInstigator), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_ModifierInstigator,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_Modifier,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::NewProp_ModifierInstigator,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::Function_MetaDataParams[] = {
@@ -68,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		{ "ModuleRelativePath", "Public/I_Modifier.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnReceivedModifier", nullptr, nullptr, sizeof(I_Modifier_eventOnReceivedModifier_Parms), Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnReceivedModifier", nullptr, nullptr, sizeof(I_Modifier_eventOnReceivedModifier_Parms), Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnReceivedModifier_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UI_Modifier_OnReceivedModifier()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -97,7 +119,7 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		{ "ModuleRelativePath", "Public/I_Modifier.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnTryRemoveModifier", nullptr, nullptr, sizeof(I_Modifier_eventOnTryRemoveModifier_Parms), Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnTryRemoveModifier", nullptr, nullptr, sizeof(I_Modifier_eventOnTryRemoveModifier_Parms), Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -109,19 +131,19 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 	}
 	struct Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics
 	{
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ModifierType;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ModifierType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ModifierType;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType = { "ModifierType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(I_Modifier_eventOnTryRemoveModifierByType_Parms, ModifierType), Z_Construct_UEnum_NetworkAbilityKit_EModifierType, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType = { "ModifierType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(I_Modifier_eventOnTryRemoveModifierByType_Parms, ModifierType), Z_Construct_UEnum_NetworkAbilityKit_EModifierType, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::NewProp_ModifierType,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::Function_MetaDataParams[] = {
@@ -129,7 +151,7 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		{ "ModuleRelativePath", "Public/I_Modifier.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnTryRemoveModifierByType", nullptr, nullptr, sizeof(I_Modifier_eventOnTryRemoveModifierByType_Parms), Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UI_Modifier, nullptr, "OnTryRemoveModifierByType", nullptr, nullptr, sizeof(I_Modifier_eventOnTryRemoveModifierByType_Parms), Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -158,9 +180,9 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_NetworkAbilityKit,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UI_Modifier_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UI_Modifier_OnReceivedModifier, "OnReceivedModifier" }, // 4259679880
-		{ &Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier, "OnTryRemoveModifier" }, // 652454432
-		{ &Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType, "OnTryRemoveModifierByType" }, // 878875735
+		{ &Z_Construct_UFunction_UI_Modifier_OnReceivedModifier, "OnReceivedModifier" }, // 4210346714
+		{ &Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifier, "OnTryRemoveModifier" }, // 3571872874
+		{ &Z_Construct_UFunction_UI_Modifier_OnTryRemoveModifierByType, "OnTryRemoveModifierByType" }, // 2359211818
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UI_Modifier_Statics::Class_MetaDataParams[] = {
@@ -179,12 +201,12 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		FuncInfo,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
-		ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x000840A1u,
-		METADATA_PARAMS(Z_Construct_UClass_UI_Modifier_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UI_Modifier_Statics::Class_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UClass_UI_Modifier_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UI_Modifier_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UI_Modifier()
 	{
@@ -195,7 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeI_Modifier() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UI_Modifier, 1641811739);
+	IMPLEMENT_CLASS(UI_Modifier, 3186589297);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<UI_Modifier>()
 	{
 		return UI_Modifier::StaticClass();

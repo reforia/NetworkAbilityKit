@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -52,18 +52,18 @@ void EmptyLinkFunctionForGeneratedCodePS_Arena() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APS_Arena_Statics::ClassParams = {
 		&APS_Arena::StaticClass,
-		nullptr,
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
-		0x009002A0u,
-		METADATA_PARAMS(Z_Construct_UClass_APS_Arena_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_APS_Arena_Statics::Class_MetaDataParams))
+		0x009002A4u,
+		METADATA_PARAMS(Z_Construct_UClass_APS_Arena_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_APS_Arena_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_APS_Arena()
 	{
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodePS_Arena() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APS_Arena, 2893015382);
+	IMPLEMENT_CLASS(APS_Arena, 2191609149);
 	template<> NETWORKABILITYKIT_API UClass* StaticClass<APS_Arena>()
 	{
 		return APS_Arena::StaticClass();

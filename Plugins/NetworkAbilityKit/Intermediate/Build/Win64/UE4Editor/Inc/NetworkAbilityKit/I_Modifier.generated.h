@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -16,38 +16,15 @@ class AActor;
 #endif
 #define NETWORKABILITYKIT_I_Modifier_generated_h
 
+#define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_SPARSE_DATA
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_RPC_WRAPPERS \
 	virtual void OnTryRemoveModifierByType_Implementation(EModifierType ModifierType) {}; \
 	virtual void OnTryRemoveModifier_Implementation(FName ModifierName) {}; \
 	virtual void OnReceivedModifier_Implementation(AModifierBase* Modifier, AActor* ModifierInstigator) {}; \
  \
-	DECLARE_FUNCTION(execOnTryRemoveModifierByType) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifierByType_Implementation(EModifierType(Z_Param_ModifierType)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTryRemoveModifier) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifier_Implementation(Z_Param_ModifierName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReceivedModifier) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReceivedModifier_Implementation(Z_Param_Modifier,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnTryRemoveModifierByType); \
+	DECLARE_FUNCTION(execOnTryRemoveModifier); \
+	DECLARE_FUNCTION(execOnReceivedModifier);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -55,33 +32,9 @@ class AActor;
 	virtual void OnTryRemoveModifier_Implementation(FName ModifierName) {}; \
 	virtual void OnReceivedModifier_Implementation(AModifierBase* Modifier, AActor* ModifierInstigator) {}; \
  \
-	DECLARE_FUNCTION(execOnTryRemoveModifierByType) \
-	{ \
-		P_GET_ENUM(EModifierType,Z_Param_ModifierType); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifierByType_Implementation(EModifierType(Z_Param_ModifierType)); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnTryRemoveModifier) \
-	{ \
-		P_GET_PROPERTY(UNameProperty,Z_Param_ModifierName); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnTryRemoveModifier_Implementation(Z_Param_ModifierName); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execOnReceivedModifier) \
-	{ \
-		P_GET_OBJECT(AModifierBase,Z_Param_Modifier); \
-		P_GET_OBJECT(AActor,Z_Param_ModifierInstigator); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->OnReceivedModifier_Implementation(Z_Param_Modifier,Z_Param_ModifierInstigator); \
-		P_NATIVE_END; \
-	}
+	DECLARE_FUNCTION(execOnTryRemoveModifierByType); \
+	DECLARE_FUNCTION(execOnTryRemoveModifier); \
+	DECLARE_FUNCTION(execOnReceivedModifier);
 
 
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_EVENT_PARMS \
@@ -182,6 +135,7 @@ public: \
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_RPC_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_INCLASS_IINTERFACE \
@@ -192,6 +146,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_SPARSE_DATA \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_CALLBACK_WRAPPERS \
 	NetworkAbilityKit_Plugins_NetworkAbilityKit_Source_NetworkAbilityKit_Public_I_Modifier_h_16_INCLASS_IINTERFACE_NO_PURE_DECLS \

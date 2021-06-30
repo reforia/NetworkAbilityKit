@@ -69,7 +69,7 @@ void AGM_Arena::SERVER_SpawnPlayer_Implementation(APlayerController* PlayerContr
 		UE_LOG(LogTemp, Log, TEXT("----Pawn already there, destroying----"));
 		TmpPawn->Destroy();
 	}
-	int32 TmpPlayerID = PlayerController->GetPlayerState<APlayerState>()->PlayerId;
+	int32 TmpPlayerID = PlayerController->GetPlayerState<APlayerState>()->GetPlayerId();
 	//APlayerState* TmpPS = UGameplayStatics::GetGameState(PlayerController)->PlayerArray[0];
 	int32 ModuloID = TmpPlayerID % 2;
 	//int32 TmpPSPlayerID = TmpPS->PlayerId;
